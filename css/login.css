@@ -1,0 +1,108 @@
+/* ==========================================================================
+   login.css — minimal login page (pages/login.html)
+   Keeps the shared header, dark theme, gold accent and Poppins/Montserrat fonts.
+   ========================================================================== */
+
+/* Plain solid dark background: no ambient glow or coloured gradient. */
+body.login-page {
+  background: var(--bg);
+}
+
+body.login-page::before {
+  display: none;
+}
+
+.login-main {
+  display: grid;
+  place-items: center;
+  min-height: calc(100vh - var(--header-height));
+  min-height: calc(100svh - var(--header-height));
+  padding: 32px 16px;
+}
+
+.login-card {
+  width: min(100%, 380px);
+  padding: 32px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+}
+
+.login-card h1 {
+  margin: 0 0 24px;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  color: var(--text);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.field input {
+  width: 100%;
+  height: 44px;
+  padding: 0 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.95rem;
+}
+
+.field input::placeholder {
+  color: #78829a;
+}
+
+/* Global :focus-visible outline from style.css stays visible. */
+.field input:focus {
+  border-color: var(--gold);
+}
+
+.form-error {
+  margin: 0;
+  color: #ff8b8b;
+  font-size: 0.8rem;
+}
+
+.form-error[hidden] {
+  display: none;
+}
+
+.login-submit {
+  width: 100%;
+  min-height: 44px;
+  margin-top: 4px;
+  box-shadow: none;
+}
+
+.signup {
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.signup a {
+  color: var(--gold);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.signup a:hover {
+  text-decoration: underline;
+}

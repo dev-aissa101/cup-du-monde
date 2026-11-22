@@ -2,26 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>World Cup 2030 | Morocco - Portugal - Spain</title>
+    <meta name="description" content="Explore the Morocco stadiums of the 2030 FIFA World Cup.">
+    <link rel="icon" type="image/png" href="../images/logos/logofifa.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-    <link rel="stylesheet" href="page2.css" />
+    <link rel="stylesheet" href="../css/morocco.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/site.js" defer></script>
 </head>
-<body>
-    <header class="header">
-      
-        <div class="menu">
-          <div class="divmenu"><a href="index.html">HOME</a></div>
-          <div class="divmenu"><a href="index.html">ABOUT</a></div>
-          <div class="divmenu"><a href="index.html">CONTACT</a></div>
-          <div class="divmenu"><a href="page5.html">LOG IN</a></div>
+<body data-nav-active="stadiums">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="nav-shell">
+        <a class="brand" href="../index.html" aria-label="World Cup 2030 home">
+          <span class="brand-mark" aria-hidden="true"><i class="fa-solid fa-trophy"></i></span>
+          <span class="brand-text">WORLD CUP <strong>2030</strong></span>
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+          <ul class="nav-list">
+            <li><a class="nav-link" href="../index.html" data-nav="home">Home</a></li>
+            <li><a class="nav-link" href="../index.html#about" data-nav="about">About</a></li>
+            <li><a class="nav-link" href="../index.html#stadiums" data-nav="stadiums">Stadiums</a></li>
+            <li><a class="nav-link" href="../index.html#contact" data-nav="contact">Contact</a></li>
+            <li><a class="nav-login" href="login.html" data-nav="login">Log In</a></li>
+          </ul>
+        </nav>
       </div>
-      </header>
+    </header>
+    <main id="main">
     <h1>MOROCCO</h1>
     <div class="photos">
       
         <div class="texte">
-          <img src="casa.png" />
+          <img src="../images/morocco/casa.png" />
           <h3>
             Hassan II Stadium in Casablanca
           </h3>
@@ -36,7 +58,7 @@ transparent form," promises the Swiss architecture agency in charge of the proje
           </p>
         </div>
         <div class="texte">
-          <img src="tanger.png" />
+          <img src="../images/morocco/tanger.png" />
           <h3>Grand stadium of Tangier</h3>
           
           <p>
@@ -51,7 +73,7 @@ transparent form," promises the Swiss architecture agency in charge of the proje
           </p>
         </div>
         <div class="texte">
-          <img src="rabat.jpg" />
+          <img src="../images/morocco/rabat.jpg" />
           <h3>Prince Moulay Abdellah Stadium in Rabat</h3>
           <p>
             Built in 1980, the Moulay Abdellah stadium in Rabat
@@ -63,7 +85,7 @@ transparent form," promises the Swiss architecture agency in charge of the proje
       </div>
       <div class="photos">
       <div class="texte">
-        <img src="agadir.png" />
+        <img src="../images/morocco/agadir.png" />
         <h3>Grand stadium of Agadir</h3>
         <p>
           Inaugurated in October 2013, the Grand Stade d’Agadir has already hosted major international events, such as the Club World Cup in 2013. With a capacity of 42,000, the stadium hosts football matches, as well as other sporting, professional and cultural events, such as music concerts, corporate seminars and gala evenings. The renovation work will take place in two stages: the first in preparation for the 2025 African Cup of Nations, and the second in preparation for the 2030 World Cup.
@@ -72,18 +94,18 @@ transparent form," promises the Swiss architecture agency in charge of the proje
       </div>
       <div class="photos">
         <div class="texte">
-          <img src="fes.png" />
+          <img src="../images/morocco/fes.png" />
           <h3>Fez Stadium</h3>
           <p>
             The renovation project of the Fez Stadium provides for the removal of the athletics track, in order to build new stands, with a capacity of 10,000 additional seats. These changes will increase the total capacity to 46,000 seats. Built in the 1990s, the Fez Sports Complex currently has a capacity of 35,600 seats.
           </p>
         </div>
         <div class="texte">
-            <img src="Marrakech.jpg" />
+            <img src="../images/morocco/marrakech.jpg" />
           <h3> The Grand Stadium of Marrakech</h3>
           <p>The Grand Stade de Marrakech will be brought up to CAF standards for the 2025 CAN and FIFA standards for the 2030 World Cup. With a capacity of 42,000 seats, it will also be able to host group matches or World Cup qualifying matches. The renovation work will be carried out in two phases, before and after the 2025 CAN. This work will concern the changing rooms, stands, adjoining stadiums and lighting.
           </p>
         </div>
-      </div>
+      </div>    </main>
 </body>
 </html>

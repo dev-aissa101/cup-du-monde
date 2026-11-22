@@ -2,110 +2,323 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=*, initial-scale=1.0" />
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>World Cup 2030 | Morocco - Portugal - Spain</title>
+    <meta
+      name="description"
+      content="World Cup 2030 — the 24th FIFA World Cup hosted by Morocco, Portugal and Spain. Explore the tournament, the host cities and the stadiums."
+    />
+    <meta name="theme-color" content="#050914" />
+
+    <!-- Open Graph / social sharing -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="World Cup 2030" />
+    <meta property="og:title" content="World Cup 2030 | Morocco - Portugal - Spain" />
+    <meta
+      property="og:description"
+      content="Three continents. One celebration. Discover the road to the 2030 World Cup."
+    />
+    <meta property="og:url" content="https://aissadev108.netlify.app/" />
+    <meta property="og:image" content="https://aissadev108.netlify.app/images/backgrounds/background.webp" />
+    <link rel="canonical" href="https://aissadev108.netlify.app/" />
+    <link rel="icon" type="image/png" href="images/logos/logofifa.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
-    <link rel="stylesheet" href="page1.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <script src="js/site.js" defer></script>
   </head>
-  <body>
-    <header class="header">
-      <div class="menu">
-        <div class="divmenu"><a href="page1.html">HOME</a></div>
-        <div class="divmenu"><a href="#about">ABOUT</a></div>
-        <div class="divmenu"><a href="#aissa">CONTACT</a></div>
-        <div class="divmenu"><a href="page5.html">LOG IN</a></div>
+
+  <body data-nav-active="home">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Shared header: also used (with the same markup) on the other pages -->
+    <header class="site-header">
+      <div class="nav-shell">
+        <a class="brand" href="index.html" aria-label="World Cup 2030 home">
+          <span class="brand-mark" aria-hidden="true"><i class="fa-solid fa-trophy"></i></span>
+          <span class="brand-text">WORLD CUP <strong>2030</strong></span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+        >
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+          <ul class="nav-list">
+            <li><a class="nav-link" href="index.html" data-nav="home">Home</a></li>
+            <li><a class="nav-link" href="index.html#about" data-nav="about">About</a></li>
+            <li><a class="nav-link" href="index.html#stadiums" data-nav="stadiums">Stadiums</a></li>
+            <li><a class="nav-link" href="index.html#contact" data-nav="contact">Contact</a></li>
+            <li><a class="nav-login" href="pages/login.html" data-nav="login">Log In</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
 
-    <h1 >WORLD CUP <br />2030</h1>
+    <main id="main">
+      <!-- ============================ HERO ============================ -->
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-inner">
+          <p class="eyebrow">24th FIFA World Cup &middot; Morocco &middot; Portugal &middot; Spain</p>
+          <h1 id="hero-title">WORLD CUP <span>2030</span></h1>
+          <p class="tagline">Three continents. One celebration.</p>
 
-    <div class="contenu1">
-      <div class="image1">
-        <img src="background.webp" alt="" />
-        <div>
-          The 2030 FIFA World Cup will be the 24th FIFA World Cup, a quadrennial
-          international football tournament contested by the men's national
-          teams of the member associations of FIFA. For the first time, three
-          countries from two continents will host the competition, with Morocco,
-          Portugal, and Spain as host nations. Additionally, Argentina,
-          Paraguay, and Uruguay will commemorate the 100th anniversary of the
-          FIFA World Cup, in particular the first World Cup in Uruguay. The
-          first game, alongside a special centenary celebration, will be held in
-          the Estadio Centenario in Montevideo, Uruguay. The second and third
-          games will be held in Argentina and Paraguay, respectively. The rest
-          of the games will be held in Spain, Morocco and Portugal.
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#stadiums">Discover Stadiums</a>
+            <a class="btn btn-ghost" href="pages/login.html">Log In</a>
+          </div>
+
+          <div class="countdown" role="timer" aria-label="Countdown to the 2030 World Cup">
+            <div class="countdown-item">
+              <span class="count-value" data-count="days">--</span>
+              <span class="count-label">Days</span>
+            </div>
+            <div class="countdown-item">
+              <span class="count-value" data-count="hours">--</span>
+              <span class="count-label">Hours</span>
+            </div>
+            <div class="countdown-item">
+              <span class="count-value" data-count="minutes">--</span>
+              <span class="count-label">Minutes</span>
+            </div>
+            <div class="countdown-item">
+              <span class="count-value" data-count="seconds">--</span>
+              <span class="count-label">Seconds</span>
+            </div>
+          </div>
+          <p class="countdown-date">Kick-off: June 2030 &middot; the countdown runs in your local browser time.</p>
         </div>
-      </div>
-    </div>
-    <h1> ABOUT STADIUMS</h1>
-    <div class="contenu2">
-      <div class="image2">
-        <img src="map.png" alt="" />
-      </div>
-      <div class="text">
-        Before finalizing the bid book on 31 July 2024, the Royal Spanish
-        Football Federation announced its proposed 11 stadiums from 9 cities to
-        host matches. The federation had also proposed two more stadiums, Nou
-        Mestalla in Valencia, and Balaídos in Vigo, but their inclusion would
-        have exceeded FIFA's maximum of twenty stadiums.The host city list was
-        finalized 12 days later. It includes six stadiums in six cities in
-        Morocco, three stadiums in two cities in Portugal, and eleven stadiums
-        in nine cities in Spain, for a total of twenty stadiums in seventeen
-        cities.
-      </div>
-    </div>
+      </section>
 
-    <div class="pays">
-      <div class="logo">
-        <img src="logomaroc1.png" alt="" />
-        <button><a href="page2.html">discover more</a></button>
+      <!-- ============================ ABOUT ============================ -->
+      <section id="about" class="section about" aria-labelledby="about-title">
+        <div class="container about-grid">
+          <div class="about-copy reveal">
+            <p class="eyebrow">About the tournament</p>
+            <h2 id="about-title">A world first: three hosts, two continents</h2>
+            <p>
+              The 2030 FIFA World Cup will be the 24th edition of the quadrennial international
+              tournament contested by the men's national teams of FIFA's member associations.
+              For the first time, three countries from two continents will host the competition:
+              Morocco, Portugal and Spain.
+            </p>
+            <p>
+              Argentina, Paraguay and Uruguay will also host matches to commemorate the 100th
+              anniversary of the World Cup, in particular the first tournament in Uruguay. The
+              opening game, alongside a special centenary celebration, will be held at the
+              Estadio Centenario in Montevideo.
+            </p>
+            <p>
+              The second and third games will take place in Argentina and Paraguay respectively.
+              The rest of the tournament will be played in Spain, Morocco and Portugal.
+            </p>
+          </div>
+
+          <div class="facts reveal" aria-label="Key tournament facts">
+            <div class="fact"><span>24<sup>th</sup></span><p>FIFA World Cup</p></div>
+            <div class="fact"><span>3</span><p>Host nations</p></div>
+            <div class="fact"><span>20</span><p>Stadiums</p></div>
+            <div class="fact"><span>17</span><p>Host cities</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================== STADIUMS ========================== -->
+      <section id="stadiums" class="section stadiums" aria-labelledby="stadiums-title">
+        <div class="container">
+          <p class="eyebrow reveal">The venues</p>
+          <h2 id="stadiums-title" class="reveal">Stadiums across three hosts</h2>
+          <p class="section-lead reveal">
+            Before finalizing the bid book on 31 July 2024, the Royal Spanish Football Federation
+            announced 11 proposed stadiums in 9 cities. Two more venues — Nou Mestalla in Valencia
+            and Balaídos in Vigo — were also considered, but including them would have exceeded
+            FIFA's maximum of twenty stadiums.
+          </p>
+          <p class="section-lead reveal">
+            The host city list was finalized 12 days later: six stadiums in six cities in Morocco,
+            three in two cities in Portugal and eleven in nine cities in Spain — twenty stadiums
+            in seventeen cities in total.
+          </p>
+
+          <figure class="map-card reveal">
+            <img
+              src="images/backgrounds/map.png"
+              alt="Map of the 2030 World Cup host stadiums across Morocco, Portugal and Spain"
+              width="608"
+              height="637"
+              loading="lazy"
+            />
+            <figcaption>The 2030 host nation stadiums at a glance.</figcaption>
+          </figure>
+
+          <div class="host-grid">
+            <article class="host-card host-card--morocco reveal">
+              <div class="host-logo">
+                <img src="images/logos/logomaroc1.png" alt="Morocco host nation logo" width="512" height="512" loading="lazy" />
+              </div>
+              <h3>Morocco</h3>
+              <p class="host-stats">6 stadiums &middot; 6 cities</p>
+              <a class="btn btn-outline" href="pages/morocco.html">
+                Discover more <span class="sr-only">about Morocco stadiums</span>
+              </a>
+            </article>
+
+            <article class="host-card host-card--portugal reveal">
+              <div class="host-logo">
+                <img src="images/logos/logoportugal.png" alt="Portugal host nation logo" width="4096" height="4096" loading="lazy" />
+              </div>
+              <h3>Portugal</h3>
+              <p class="host-stats">3 stadiums &middot; 2 cities</p>
+              <a class="btn btn-outline" href="pages/portugal.html">
+                Discover more <span class="sr-only">about Portugal stadiums</span>
+              </a>
+            </article>
+
+            <article class="host-card host-card--spain reveal">
+              <div class="host-logo">
+                <img src="images/logos/logospain.png" alt="Spain host nation logo" width="3840" height="2160" loading="lazy" />
+              </div>
+              <h3>Spain</h3>
+              <p class="host-stats">11 stadiums &middot; 9 cities</p>
+              <a class="btn btn-outline" href="pages/spain.html">
+                Discover more <span class="sr-only">about Spain stadiums</span>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================== CONTACT ========================== -->
+      <section id="contact" class="section contact" aria-labelledby="contact-title">
+        <div class="container contact-grid">
+          <div class="contact-intro reveal">
+            <p class="eyebrow">Get in touch</p>
+            <h2 id="contact-title">Contact us</h2>
+            <p>
+              Have a question about the tournament, the host cities or the stadiums? Send us a
+              message and we'll get back to you.
+            </p>
+
+            <!-- Replace these with your own official social profile URLs. -->
+            <ul class="social-list" aria-label="Social media">
+              <li>
+                <a
+                  href="https://www.instagram.com/fifaworldcup/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="FIFA World Cup on Instagram"
+                ><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/fifa/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="FIFA on LinkedIn"
+                ><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.youtube.com/@FIFAWorldCup"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="FIFA World Cup on YouTube"
+                ><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+              </li>
+              <li>
+                <a
+                  href="https://x.com/FIFAWorldCup"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="FIFA World Cup on X"
+                ><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Netlify Forms: works on the static site without a backend.
+               Configure form notifications in the Netlify dashboard. -->
+          <form
+            class="contact-form reveal"
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <p class="sr-only" aria-hidden="true">
+              <label>Do not fill this out: <input name="bot-field" /></label>
+            </p>
+
+            <div class="field">
+              <label for="contact-name">Full name</label>
+              <input
+                id="contact-name"
+                name="name"
+                type="text"
+                placeholder="Your full name"
+                autocomplete="name"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="contact-email">Email address</label>
+              <input
+                id="contact-email"
+                name="email"
+                type="email"
+                placeholder="you@example.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="contact-message">Your message</label>
+              <textarea
+                id="contact-message"
+                name="message"
+                placeholder="Tell us what's on your mind..."
+                required
+              ></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Send email</button>
+            <p class="form-note">This form is handled by Netlify Forms — no data is stored in the browser.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>&copy; <span data-year>2026</span> World Cup 2030. Demo project, not affiliated with FIFA.</p>
+        <nav aria-label="Footer navigation">
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#stadiums">Stadiums</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="pages/login.html">Log In</a></li>
+          </ul>
+        </nav>
       </div>
-      <div class="logo">
-        <img src="logoportugal.png" alt="" />
-        <button><a href="page3.html">discover more</a></button>
-      </div>
-      <div class="logo">
-        <img src="logospain.png" alt="" />
-        <button><a href="page4.html">discover more</a></button>
-      </div>
-    </div>
-    <div class="contact-about">
-      <a name="aissa"></a>
-      <div class="contact-container">
-        <h2>Contact Us</h2>
-        <input type="text" placeholder="Full Name" />
-        <input type="email" placeholder="Email" />
-        <textarea placeholder="Your Message"></textarea>
-        <button class="send-button">SEND EMAIL</button>
-      </div>
-      <div class="aboutus">
-        <a name="about"></a>
-        <ul>
-          <li class="item">
-            <a href="#">
-              <i class="fa-brands fa-instagram icon"></i>
-            </a>
-          </li>
-          <li class="item">
-            <a href="#">
-              <i class="fa-brands fa-linkedin icon"></i>
-            </a>
-          </li>
-          <li class="item">
-            <a href="#">
-              <i class="fa-brands fa-youtube icon"></i>
-            </a>
-          </li>
-          <li class="item">
-            <a href="#">
-              <i class="fa-brands fa-x-twitter icon"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
+    </footer>
   </body>
 </html>
